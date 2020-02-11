@@ -10,8 +10,6 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Harsha Rathnayaka
 
-# Install Nginx
-
 # Add application repository URL to the default sources
 # RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
 
@@ -21,6 +19,7 @@ RUN apt-get update
 # Install necessary tools
 RUN apt-get install -y vim wget dialog net-tools
 
+# Install Nginx
 RUN apt-get install -y nginx
 
 # Remove the default Nginx configuration file
